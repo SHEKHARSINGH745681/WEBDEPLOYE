@@ -11,7 +11,7 @@ using WEBDEPLOYE.DATA;
 namespace WEBDEPLOYE.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241222091459_add@")]
+    [Migration("20241222114734_add#")]
     partial class add
     {
         /// <inheritdoc />
