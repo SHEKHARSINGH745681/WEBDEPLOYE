@@ -1,0 +1,7 @@
+﻿@WEBDEPLOYE_HostAddress = http://localhost:5268
+
+GET {{WEBDEPLOYE_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
