@@ -16,6 +16,7 @@ namespace WEBDEPLOYE.Controllers
         };
 
         // GET api/user
+        [Route("get")]
         [HttpGet]
         public IActionResult GetAllUsers()
         {
@@ -37,6 +38,7 @@ namespace WEBDEPLOYE.Controllers
         }
 
         // POST api/user
+        [Route("add")]
         [HttpPost]
         public IActionResult CreateUser([FromBody] User newUser)
         {
