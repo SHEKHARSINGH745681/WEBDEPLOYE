@@ -4,7 +4,7 @@ using WEBDEPLOYE.Models;
 
 namespace WEBDEPLOYE.Controllers
 {
-    [Route("api]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
