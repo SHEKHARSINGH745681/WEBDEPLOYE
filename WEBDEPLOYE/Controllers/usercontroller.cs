@@ -15,8 +15,8 @@ namespace WEBDEPLOYE.Controllers
         {
             _context = context;
         }
-
-        [HttpPost("add")]
+        [Route("add")]
+        [HttpPost]
         public IActionResult AddUser([FromBody] User user)
         {
             if (user == null)
@@ -29,14 +29,14 @@ namespace WEBDEPLOYE.Controllers
 
             return CreatedAtAction(nameof(GetUserById), new { id = user.Id }, user);
         }
-
-        [HttpGet("get/{id}")]
-        public IActionResult GetUserById(int id)
+        [Route("get")]
+        [HttpGet]
+        public IActionResult GetUserById()
         {
-            var user = _context.Users.Find(id);
+            var user = _context.Users.Find();
             if (user == null)
             {
-                return NotFound($"User with ID {id} not found.");
+                return NotFound($"User with ID  not found.");
             }
             return Ok(user);
         }
